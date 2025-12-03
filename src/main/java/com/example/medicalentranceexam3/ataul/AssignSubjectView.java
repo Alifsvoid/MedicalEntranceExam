@@ -1,13 +1,12 @@
-package com.example.medicalentranceexam3.Ataulpkg;
+package com.example.medicalentranceexam3.ataul;
 
 import javafx.event.ActionEvent;
-import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
-public class SetQuestionStatusView
+public class AssignSubjectView
 {
     @javafx.fxml.FXML
-    private ComboBox<String> statusComboBox;
+    private TextField subjectTextField;
     @javafx.fxml.FXML
     private TextField questionIdTextField;
 
@@ -16,6 +15,6 @@ public class SetQuestionStatusView
     }
 
     @javafx.fxml.FXML
-    public void handleSetButton(ActionEvent actionEvent) {
+    public void handleAssigneSubjectButton(ActionEvent actionEvent) {
     }
 }

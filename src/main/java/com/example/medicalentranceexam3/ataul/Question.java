@@ -1,4 +1,4 @@
-package com.example.medicalentranceexam3.Ataulpkg;
+package com.example.medicalentranceexam3.ataul;
 
 import java.util.ArrayList;
 

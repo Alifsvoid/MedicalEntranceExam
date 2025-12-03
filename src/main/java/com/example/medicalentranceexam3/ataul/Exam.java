@@ -1,4 +1,4 @@
-package com.example.medicalentranceexam3.Ataulpkg;
+package com.example.medicalentranceexam3.ataul;
 
 import java.time.LocalDate;
 
@@ -7,12 +7,14 @@ public class Exam {
     private String title;          // "Medical Admission Test 2025"
     private String status;         // Draft, Approved, Published
     private LocalDate publishDate;
+    private LocalDate examDate;
 
-    public Exam(int id, String title, String status, LocalDate publishDate) {
+    public Exam(int id, String title, String status, LocalDate publishDate, LocalDate examDate) {
         this.id = id;
         this.title = title;
         this.status = status;
         this.publishDate = publishDate;
+        this.examDate = examDate;
     }
 
     public int getId() {
@@ -47,6 +49,13 @@ public class Exam {
         this.publishDate = publishDate;
     }
 
+    public LocalDate getExamDate() {
+        return examDate;
+    }
+
+    public void setExamDate(LocalDate examDate) {
+        this.examDate = examDate;
+    }
 
     @Override
     public String toString() {
@@ -55,6 +64,7 @@ public class Exam {
                 ", title='" + title + '\'' +
                 ", status='" + status + '\'' +
                 ", publishDate=" + publishDate +
+                ", examDate=" + examDate +
                 '}';
     }
 }

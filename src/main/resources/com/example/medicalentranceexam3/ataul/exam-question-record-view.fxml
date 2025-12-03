@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.Ataulpkg.AddQuestionView">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.ataul.AddQuestionView">
    <children>
       <TextField fx:id="examIdTextField" layoutX="129.0" layoutY="96.0" prefHeight="26.0" prefWidth="163.0" />
       <Text layoutX="56.0" layoutY="114.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam ID:" />
