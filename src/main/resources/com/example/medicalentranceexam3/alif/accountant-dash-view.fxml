@@ -2,99 +2,90 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<?import javafx.scene.effect.DropShadow?>
-<?import javafx.scene.paint.Color?>
 
-<AnchorPane prefHeight="650.0" prefWidth="900.0"
-            xmlns="http://javafx.com/javafx/23.0.1"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.medicalentranceexam3.alif.AccountantDashViewController">
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.alif.AccountantDashViewController">
 
    <children>
       <!-- Top Title -->
       <Text layoutX="35" layoutY="60" text="Accountant Dashboard">
          <font>
-            <Font name="Arial Black" size="30"/>
+            <Font name="Arial Black" size="30" />
          </font>
       </Text>
 
       <!-- Card Container -->
-      <StackPane layoutX="50" layoutY="90" prefWidth="800" prefHeight="500"
-                 style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #dcdcdc; -fx-border-width: 1;">
+      <StackPane layoutX="50" layoutY="90" prefHeight="500" prefWidth="800" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #dcdcdc; -fx-border-width: 1;">
          <effect>
-            <DropShadow radius="10" color="#b5b5b5"/>
+            <DropShadow color="#b5b5b5" radius="10" />
          </effect>
 
-         <VBox spacing="25" alignment="CENTER">
+         <VBox alignment="CENTER" spacing="25">
             <padding>
-               <Insets top="40" right="40" bottom="40" left="40"/>
+               <Insets bottom="40" left="40" right="40" top="40" />
             </padding>
 
             <!-- Row 1 -->
-            <HBox spacing="40" alignment="CENTER">
-               <Button text="ADD APPLICANT"
-                       prefWidth="300" prefHeight="55"
-                       onAction="#handleAddApplicantButton"
-                       style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;">
+            <HBox alignment="CENTER" spacing="40">
+               <Button onAction="#handleAddApplicantButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="ADD APPLICANT">
                   <font>
-                     <Font size="16"/>
+                     <Font size="16" />
                   </font>
                </Button>
 
-               <Button text="EDIT APPLICANT INFO"
-                       prefWidth="300" prefHeight="55"
-                       onAction="#handleEditApplicantButton"
-                       style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;">
+               <Button onAction="#handleEditApplicantButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="EDIT APPLICANT INFO">
                   <font>
-                     <Font size="16"/>
+                     <Font size="16" />
                   </font>
                </Button>
             </HBox>
 
             <!-- Row 2 -->
-            <HBox spacing="40" alignment="CENTER">
-               <Button text="DELETE APPLICANT"
-                       prefWidth="300" prefHeight="55"
-                       onAction="#handleDeleteApplicant"
-                       style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;">
+            <HBox alignment="CENTER" spacing="40">
+               <Button onAction="#handleDeleteApplicant" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="DELETE APPLICANT">
                   <font>
-                     <Font size="16"/>
+                     <Font size="16" />
                   </font>
                </Button>
 
-               <Button text="UPDATE PAYMENT STATUS"
-                       prefWidth="300" prefHeight="55"
-                       onAction="#handleUpdatePaymentButton"
-                       style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;">
+               <Button onAction="#handleUpdatePaymentButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="UPDATE PAYMENT STATUS">
                   <font>
-                     <Font size="16"/>
+                     <Font size="16" />
                   </font>
                </Button>
             </HBox>
 
             <!-- Row 3 -->
-            <HBox spacing="40" alignment="CENTER">
-               <Button text="GENERATE ADMIT CARD"
-                       prefWidth="300" prefHeight="55"
-                       onAction="#handleGenerateAdmitButton"
-                       style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;">
+            <HBox alignment="CENTER" spacing="40">
+               <Button onAction="#handleGenerateAdmitButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="GENERATE ADMIT CARD">
                   <font>
-                     <Font size="16"/>
+                     <Font size="16" />
                   </font>
                </Button>
 
-               <Button text="SEAT PLAN"
-                       prefWidth="300" prefHeight="55"
-                       onAction="#handleSeatPlanButton"
-                       style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;">
+               <Button onAction="#handleSeatPlanButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="SEAT PLAN">
                   <font>
-                     <Font size="16"/>
+                     <Font size="16" />
+                  </font>
+               </Button>
+            </HBox>
+
+            <HBox alignment="CENTER" spacing="40">
+               <Button onAction="#handleNotificaitonButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="SEND NOTIFICATION">
+                  <font>
+                     <Font size="16" />
+                  </font>
+               </Button>
+
+               <Button onAction="#handleAppliedApplicantButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="APPLIED APPLICANT">
+                  <font>
+                     <Font size="16" />
                   </font>
                </Button>
             </HBox>
@@ -103,13 +94,9 @@
       </StackPane>
 
       <!-- Logout Button -->
-      <Button layoutX="760" layoutY="30"
-              prefWidth="100" prefHeight="38"
-              text="Log Out"
-              onAction="#handleLogOutButton"
-              style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 12; -fx-background-radius: 12;">
+      <Button layoutX="760" layoutY="30" onAction="#handleLogOutButton" prefHeight="38" prefWidth="100" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 12; -fx-background-radius: 12;" text="Log Out">
          <font>
-            <Font size="15"/>
+            <Font size="15" />
          </font>
       </Button>
 

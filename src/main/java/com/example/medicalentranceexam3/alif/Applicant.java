@@ -11,13 +11,15 @@ public class Applicant implements Serializable {
     private String phone;
     private String email;
     private String feePaid;
+    private String password;
 
-    public Applicant(String applicantID, String name, LocalDate dob, String phone, String email) {
+    public Applicant(String applicantID, String name, LocalDate dob, String phone, String email, String password) {
         this.applicantID = applicantID;
         this.name = name;
         this.dob = dob;
         this.phone = phone;
         this.email = email;
+        this.password = password;
         this.feePaid = "Due";
     }
 
@@ -70,6 +72,14 @@ public class Applicant implements Serializable {
 
     public void setFeePaid(String feePaid) {
         this.feePaid = feePaid;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override

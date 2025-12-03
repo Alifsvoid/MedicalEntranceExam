@@ -4,10 +4,7 @@ import com.example.medicalentranceexam3.utils.BinaryFileHelper;
 import com.example.medicalentranceexam3.utils.SceneSwitcher;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
-import javafx.scene.control.DatePicker;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 import java.io.File;
@@ -40,6 +37,8 @@ public class AddApplicantViewController
     @javafx.fxml.FXML
     private TableColumn<Applicant, String> phoneNumCol;
     private ArrayList<Applicant> applicantArrayList = new ArrayList<>();
+    @javafx.fxml.FXML
+    private PasswordField passwordTextField;
 
     @javafx.fxml.FXML
     public void initialize() {
@@ -67,7 +66,8 @@ public class AddApplicantViewController
                 nameTextField.getText(),
                 dobDatePicker.getValue(),
                 phoneTextField.getText(),
-                emailTextField.getText()
+                emailTextField.getText(),
+                passwordTextField.getText()
         );
 
         File file = new File("data/applicants.bin");
