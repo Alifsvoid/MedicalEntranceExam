@@ -1,23 +1,24 @@
 package com.example.medicalentranceexam3.alif;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Applicant {
+public class Applicant implements Serializable {
     // Basic personal info
     private String applicantID;   // unique ID
     private String name;
-    private String dob;           // or LocalDate dob;
+    private LocalDate dob;           // or LocalDate dob;
     private String phone;
     private String email;
-    private boolean feePaid;
+    private String feePaid;
 
-    public Applicant(String applicantID, String name, String dob, String phone, String email, boolean feePaid) {
+    public Applicant(String applicantID, String name, LocalDate dob, String phone, String email) {
         this.applicantID = applicantID;
         this.name = name;
         this.dob = dob;
         this.phone = phone;
         this.email = email;
-        this.feePaid = feePaid;
+        this.feePaid = "Due";
     }
 
 
@@ -37,13 +38,6 @@ public class Applicant {
         this.name = name;
     }
 
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
-    }
 
     public String getPhone() {
         return phone;
@@ -61,11 +55,20 @@ public class Applicant {
         this.email = email;
     }
 
-    public boolean isFeePaid() {
+
+    public LocalDate getDob() {
+        return dob;
+    }
+
+    public void setDob(LocalDate dob) {
+        this.dob = dob;
+    }
+
+    public String getFeePaid() {
         return feePaid;
     }
 
-    public void setFeePaid(boolean feePaid) {
+    public void setFeePaid(String feePaid) {
         this.feePaid = feePaid;
     }
 

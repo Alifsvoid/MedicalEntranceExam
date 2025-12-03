@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.alif.AdmitCardViewController">
+   <children>
+      <TextField fx:id="cardID" layoutX="180.0" layoutY="25.0" prefHeight="26.0" prefWidth="180.0" />
+      <TextField fx:id="applicantName" layoutX="180.0" layoutY="65.0" prefHeight="26.0" prefWidth="180.0" />
+      <TextField fx:id="examID" layoutX="180.0" layoutY="105.0" prefHeight="26.0" prefWidth="180.0" />
+      <TextField fx:id="seatNumber" layoutX="180.0" layoutY="148.0" prefHeight="26.0" prefWidth="180.0" />
+      <Text layoutX="104.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card ID:" />
+      <Text layoutX="69.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Applicant Name:" />
+      <Text layoutX="104.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam ID:" />
+      <Text layoutX="104.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seat Number:" />
+      <DatePicker fx:id="examDatePicker" layoutX="180.0" layoutY="222.0" prefHeight="26.0" prefWidth="180.0" />
+      <Text layoutX="113.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Date" />
+      <Button layoutX="430.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleGenerateButton" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: black; -fx-background-radius: 15;" text="GENERATE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <TableView fx:id="aplicantTableView" layoutX="100.0" layoutY="299.0" prefHeight="228.0" prefWidth="726.0" style="-fx-border-color: balck; -fx-border-width: 1;">
+         <columns>
+            <TableColumn fx:id="cardIDCol" prefWidth="75.0" text="Card ID" />
+            <TableColumn fx:id="examIDCol" prefWidth="101.60000610351562" text="Exam ID" />
+            <TableColumn fx:id="nameCol" prefWidth="163.99993896484375" text="Name" />
+            <TableColumn fx:id="seatNumCol" prefWidth="84.80007934570312" text="Seat Number" />
+            <TableColumn fx:id="centerCol" prefWidth="149.60009765625" text="Center" />
+            <TableColumn fx:id="dateCol" prefWidth="147.99997558593748" text="Date" />
+         </columns>
+      </TableView>
+      <Button layoutX="60.0" layoutY="583.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: black;" text="Back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Text layoutX="507.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GENERATE ADMIT CARD">
+         <font>
+            <Font name="Arial Black" size="26.0" />
+         </font>
+      </Text>
+      <TextField fx:id="examCenter" layoutX="180.0" layoutY="184.0" prefHeight="26.0" prefWidth="180.0" />
+      <Text layoutX="104.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Center:" />
+   </children>
+</AnchorPane>
