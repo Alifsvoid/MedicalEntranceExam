@@ -1,8 +1,9 @@
 package com.example.medicalentranceexam3.alif;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class AppliedExam {
+public class AppliedExam implements Serializable {
     private String applicationID;   // Unique ID for this application
     private String applicantID;     // Link to applicant
     private String applicantName;   // Optional, for easier display

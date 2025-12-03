@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.LoginViewController">
+   <children>
+      <Text layoutX="408.0" layoutY="144.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Log In">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Text>
+      <TextField fx:id="emailTextField" layoutX="354.0" layoutY="265.0" prefHeight="38.0" prefWidth="191.0" style="-fx-background-color: white; -fx-border-color: black; -fx-background-radius: 10; -fx-border-radius: 10; -fx-border-width: 0.5;" />
+      <PasswordField fx:id="passTextField" layoutX="353.0" layoutY="334.0" prefHeight="37.0" prefWidth="191.0" style="-fx-background-radius: 10; -fx-border-radius: 10;" />
+      <Text layoutX="353.0" layoutY="261.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email" />
+      <Text layoutX="353.0" layoutY="328.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" />
+      <Button layoutX="354.0" layoutY="389.0" mnemonicParsing="false" onAction="#handleLogButton" prefHeight="37.0" prefWidth="191.0" style="-fx-background-color: black; -fx-background-radius: 10; -fx-border-radius: 10;" text="Log In" textFill="WHITE" />
+      <ComboBox fx:id="userTypeComboBox" layoutX="353.0" layoutY="186.0" prefHeight="37.0" prefWidth="191.0" promptText="Select User Type" style="-fx-background-radius: 10; -fx-border-radius: 10;" />
+   </children>
+</AnchorPane>
