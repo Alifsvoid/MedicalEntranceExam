@@ -39,4 +39,9 @@ public class AccountantDashViewController
     public void handleGenerateAdmitButton(ActionEvent actionEvent) throws IOException {
         SceneSwitcher.sceneSwitch(actionEvent, "alif/admit-card-view.fxml", "Admit Card");
     }
+
+    @javafx.fxml.FXML
+    public void handleSeatPlanButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.sceneSwitch(actionEvent, "alif/seat-plan-view.fxml", "Admit Card");
+    }
 }

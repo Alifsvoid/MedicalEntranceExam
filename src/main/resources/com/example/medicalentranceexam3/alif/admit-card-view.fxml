@@ -1,53 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.DropShadow?>
 
+<AnchorPane prefHeight="650" prefWidth="900"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.medicalentranceexam3.alif.AdmitCardViewController">
 
-<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.alif.AdmitCardViewController">
    <children>
-      <TextField fx:id="cardID" layoutX="180.0" layoutY="25.0" prefHeight="26.0" prefWidth="180.0" />
-      <TextField fx:id="applicantName" layoutX="180.0" layoutY="65.0" prefHeight="26.0" prefWidth="180.0" />
-      <TextField fx:id="examID" layoutX="180.0" layoutY="105.0" prefHeight="26.0" prefWidth="180.0" />
-      <TextField fx:id="seatNumber" layoutX="180.0" layoutY="148.0" prefHeight="26.0" prefWidth="180.0" />
-      <Text layoutX="104.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Card ID:" />
-      <Text layoutX="69.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Applicant Name:" />
-      <Text layoutX="104.0" layoutY="123.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam ID:" />
-      <Text layoutX="104.0" layoutY="166.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Seat Number:" />
-      <DatePicker fx:id="examDatePicker" layoutX="180.0" layoutY="222.0" prefHeight="26.0" prefWidth="180.0" />
-      <Text layoutX="113.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Date" />
-      <Button layoutX="430.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleGenerateButton" prefHeight="34.0" prefWidth="130.0" style="-fx-background-color: black; -fx-background-radius: 15;" text="GENERATE" textFill="WHITE">
+
+      <!-- Page Title -->
+      <Text layoutX="50" layoutY="60" text="Generate Admit Card">
          <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <TableView fx:id="aplicantTableView" layoutX="100.0" layoutY="299.0" prefHeight="228.0" prefWidth="726.0" style="-fx-border-color: balck; -fx-border-width: 1;">
-         <columns>
-            <TableColumn fx:id="cardIDCol" prefWidth="75.0" text="Card ID" />
-            <TableColumn fx:id="examIDCol" prefWidth="101.60000610351562" text="Exam ID" />
-            <TableColumn fx:id="nameCol" prefWidth="163.99993896484375" text="Name" />
-            <TableColumn fx:id="seatNumCol" prefWidth="84.80007934570312" text="Seat Number" />
-            <TableColumn fx:id="centerCol" prefWidth="149.60009765625" text="Center" />
-            <TableColumn fx:id="dateCol" prefWidth="147.99997558593748" text="Date" />
-         </columns>
-      </TableView>
-      <Button layoutX="60.0" layoutY="583.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: black;" text="Back" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <Text layoutX="507.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="GENERATE ADMIT CARD">
-         <font>
-            <Font name="Arial Black" size="26.0" />
+            <Font name="Arial Black" size="28"/>
          </font>
       </Text>
-      <TextField fx:id="examCenter" layoutX="180.0" layoutY="184.0" prefHeight="26.0" prefWidth="180.0" />
-      <Text layoutX="104.0" layoutY="202.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Center:" />
+
+      <!-- CENTER CARD -->
+      <StackPane layoutX="50" layoutY="80" prefWidth="800" prefHeight="500"
+                 style="-fx-background-color: #ffffff; -fx-background-radius: 20;
+                          -fx-border-radius: 20; -fx-border-color: #dcdcdc; -fx-border-width: 1;">
+         <effect>
+            <DropShadow radius="10" color="#b5b5b5"/>
+         </effect>
+
+         <VBox spacing="20" alignment="TOP_CENTER">
+            <padding>
+               <Insets top="25" left="40" right="40" bottom="25"/>
+            </padding>
+
+            <!-- FORM -->
+            <VBox spacing="15" prefWidth="700">
+
+               <HBox spacing="20">
+                  <VBox spacing="5">
+                     <Text text="Card ID:"/>
+                     <TextField fx:id="cardID" prefWidth="250"
+                                style="-fx-background-radius: 10; -fx-padding: 8;"/>
+                  </VBox>
+
+                  <VBox spacing="5">
+                     <Text text="Applicant Name:"/>
+                     <TextField fx:id="applicantName" prefWidth="250"
+                                style="-fx-background-radius: 10; -fx-padding: 8;"/>
+                  </VBox>
+               </HBox>
+
+               <HBox spacing="20">
+                  <VBox spacing="5">
+                     <Text text="Exam ID:"/>
+                     <TextField fx:id="examID" prefWidth="250"
+                                style="-fx-background-radius: 10; -fx-padding: 8;"/>
+                  </VBox>
+
+                  <VBox spacing="5">
+                     <Text text="Seat Number:"/>
+                     <TextField fx:id="seatNumber" prefWidth="250"
+                                style="-fx-background-radius: 10; -fx-padding: 8;"/>
+                  </VBox>
+               </HBox>
+
+               <HBox spacing="20">
+                  <VBox spacing="5">
+                     <Text text="Exam Center:"/>
+                     <TextField fx:id="examCenter" prefWidth="250"
+                                style="-fx-background-radius: 10; -fx-padding: 8;"/>
+                  </VBox>
+
+                  <VBox spacing="5">
+                     <Text text="Exam Date:"/>
+                     <DatePicker fx:id="examDatePicker" prefWidth="250"
+                                 style="-fx-background-radius: 10;"/>
+                  </VBox>
+               </HBox>
+
+               <HBox alignment="CENTER_RIGHT" spacing="20">
+                  <Button text="GENERATE"
+                          onAction="#handleGenerateButton"
+                          prefWidth="180" prefHeight="40"
+                          style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;">
+                     <font>
+                        <Font size="15"/>
+                     </font>
+                  </Button>
+               </HBox>
+
+            </VBox>
+
+            <!-- TABLE -->
+            <TableView fx:id="aplicantTableView" prefHeight="250" prefWidth="720"
+                       style="-fx-background-radius: 10; -fx-border-color: #d0d0d0; -fx-border-radius: 10;">
+
+               <columns>
+                  <TableColumn fx:id="cardIDCol" text="Card ID" prefWidth="100"/>
+                  <TableColumn fx:id="examIDCol" text="Exam ID" prefWidth="120"/>
+                  <TableColumn fx:id="nameCol" text="Name" prefWidth="160"/>
+                  <TableColumn fx:id="seatNumCol" text="Seat Number" prefWidth="100"/>
+                  <TableColumn fx:id="centerCol" text="Center" prefWidth="150"/>
+                  <TableColumn fx:id="dateCol" text="Date" prefWidth="150"/>
+               </columns>
+
+            </TableView>
+
+         </VBox>
+      </StackPane>
+
+      <!-- Back Button -->
+      <Button layoutX="50" layoutY="600" prefWidth="90" prefHeight="36"
+              onAction="#handleBackButton"
+              text="Back"
+              style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 10;">
+         <font>
+            <Font size="14"/>
+         </font>
+      </Button>
+
    </children>
 </AnchorPane>

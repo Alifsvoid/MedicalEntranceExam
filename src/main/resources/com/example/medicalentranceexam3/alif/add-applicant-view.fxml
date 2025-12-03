@@ -1,45 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.effect.DropShadow?>
 
+<AnchorPane prefHeight="650" prefWidth="900"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.medicalentranceexam3.alif.AddApplicantViewController">
 
-<AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.alif.AddApplicantViewController">
-   <children>
-      <TextField fx:id="applicantIDTextField" layoutX="156.0" layoutY="37.0" prefHeight="26.0" prefWidth="180.0" />
-      <TextField fx:id="nameTextField" layoutX="156.0" layoutY="77.0" prefHeight="26.0" prefWidth="180.0" />
-      <TextField fx:id="phoneTextField" layoutX="156.0" layoutY="117.0" prefHeight="26.0" prefWidth="180.0" />
-      <TextField fx:id="emailTextField" layoutX="156.0" layoutY="160.0" prefHeight="26.0" prefWidth="180.0" />
-      <Text layoutX="80.0" layoutY="55.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Applicant ID:" />
-      <Text layoutX="80.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
-      <Text layoutX="80.0" layoutY="135.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Phone:" />
-      <Text layoutX="80.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" />
-      <DatePicker fx:id="dobDatePicker" layoutX="156.0" layoutY="204.0" prefHeight="26.0" prefWidth="180.0" />
-      <Text layoutX="80.0" layoutY="222.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DoB:" />
-      <Button layoutX="391.0" layoutY="174.0" mnemonicParsing="false" onAction="#handleAddApplicantButton" prefHeight="58.0" prefWidth="214.0" style="-fx-background-color: black;" text="ADD APPLICANT" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-      <TableView fx:id="aplicantTableView" layoutX="80.0" layoutY="279.0" prefHeight="228.0" prefWidth="726.0" style="-fx-border-color: balck; -fx-border-width: 1;">
-        <columns>
-          <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
-          <TableColumn fx:id="nameCol" prefWidth="113.59994506835938" text="Name" />
-            <TableColumn fx:id="phoneNumCol" prefWidth="193.5999755859375" text="Phone Number" />
-            <TableColumn fx:id="emailCol" prefWidth="191.20004272460938" text="Email" />
-            <TableColumn fx:id="dobCol" prefWidth="155.199951171875" text="Date Of Birth" />
-        </columns>
-      </TableView>
-      <Button layoutX="40.0" layoutY="563.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="34.0" prefWidth="88.0" style="-fx-background-color: black;" text="Back" textFill="WHITE">
-         <font>
-            <Font name="System Bold" size="12.0" />
-         </font>
-      </Button>
-   </children>
+    <children>
+
+        <!-- Title -->
+        <Text layoutX="50" layoutY="60" text="Add New Applicant">
+            <font>
+                <Font name="Arial Black" size="28"/>
+            </font>
+        </Text>
+
+        <!-- CARD PANEL -->
+        <StackPane layoutX="50" layoutY="80" prefWidth="800" prefHeight="500"
+                   style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #dcdcdc; -fx-border-width: 1;">
+            <effect>
+                <DropShadow radius="10" color="#b5b5b5"/>
+            </effect>
+
+            <VBox spacing="20" alignment="TOP_CENTER">
+                <padding>
+                    <Insets top="25" left="40" right="40" bottom="25"/>
+                </padding>
+
+                <!-- FORM -->
+                <VBox spacing="15" prefWidth="700">
+
+                    <HBox spacing="20">
+                        <VBox spacing="5">
+                            <Text text="Applicant ID:"/>
+                            <TextField fx:id="applicantIDTextField" prefWidth="250"
+                                       style="-fx-background-radius: 10; -fx-padding: 8;"/>
+                        </VBox>
+
+                        <VBox spacing="5">
+                            <Text text="Name:"/>
+                            <TextField fx:id="nameTextField" prefWidth="250"
+                                       style="-fx-background-radius: 10; -fx-padding: 8;"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox spacing="20">
+                        <VBox spacing="5">
+                            <Text text="Phone:"/>
+                            <TextField fx:id="phoneTextField" prefWidth="250"
+                                       style="-fx-background-radius: 10; -fx-padding: 8;"/>
+                        </VBox>
+
+                        <VBox spacing="5">
+                            <Text text="Email:"/>
+                            <TextField fx:id="emailTextField" prefWidth="250"
+                                       style="-fx-background-radius: 10; -fx-padding: 8;"/>
+                        </VBox>
+                    </HBox>
+
+                    <HBox spacing="20">
+                        <VBox spacing="5">
+                            <Text text="Date of Birth:"/>
+                            <DatePicker fx:id="dobDatePicker" prefWidth="250"
+                                        style="-fx-background-radius: 10;"/>
+                        </VBox>
+
+                        <VBox spacing="5" alignment="BOTTOM_CENTER">
+                            <Button text="ADD APPLICANT"
+                                    onAction="#handleAddApplicantButton"
+                                    prefWidth="220" prefHeight="45"
+                                    style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;">
+                                <font>
+                                    <Font size="15"/>
+                                </font>
+                            </Button>
+                        </VBox>
+                    </HBox>
+
+                </VBox>
+
+                <!-- TABLE -->
+                <TableView fx:id="aplicantTableView" prefHeight="250" prefWidth="720"
+                           style="-fx-background-radius: 10; -fx-border-color: #d0d0d0; -fx-border-radius: 10;">
+
+                    <columns>
+                        <TableColumn fx:id="idCol" text="ID" prefWidth="100"/>
+                        <TableColumn fx:id="nameCol" text="Name" prefWidth="150"/>
+                        <TableColumn fx:id="phoneNumCol" text="Phone Number" prefWidth="180"/>
+                        <TableColumn fx:id="emailCol" text="Email" prefWidth="180"/>
+                        <TableColumn fx:id="dobCol" text="Date Of Birth" prefWidth="150"/>
+                    </columns>
+
+                </TableView>
+
+            </VBox>
+
+        </StackPane>
+
+        <!-- Back Button -->
+        <Button layoutX="50" layoutY="600" prefWidth="90" prefHeight="36"
+                onAction="#handleBackButton"
+                text="Back"
+                style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 10;">
+            <font>
+                <Font size="14"/>
+            </font>
+        </Button>
+
+    </children>
 </AnchorPane>
