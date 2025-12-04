@@ -11,14 +11,16 @@ public class Question implements Serializable {
     private String status;
     private String difficulty;
     private Subject subject;
+    private int examID;
 
 
-    public Question(int id, String text, String status, String difficulty, Subject subject) {
+    public Question(int id, String text, String status, String difficulty, Subject subject, int examID) {
         this.id = id;
         this.text = text;
         this.status = status;
         this.difficulty = difficulty;
         this.subject = subject;
+        this.examID = examID;
     }
 
     public int getId() {
@@ -77,7 +79,13 @@ public class Question implements Serializable {
         this.subject = subject;
     }
 
+    public int getExamID() {
+        return examID;
+    }
 
+    public void setExamID(int examID) {
+        this.examID = examID;
+    }
 
     @Override
     public String toString() {

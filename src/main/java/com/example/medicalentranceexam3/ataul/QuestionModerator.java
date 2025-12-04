@@ -7,12 +7,12 @@ public class QuestionModerator implements Serializable {
     private String name;             // Moderator name
     private String email;            // Email for contact
     private String phone;            // Phone number
-    private String assignedExamID;   // Which exam he/she moderates
+    private int assignedExamID;   // Which exam he/she moderates
     private String subject;
     private String password;// Optional subject field
 
     public QuestionModerator(String moderatorID, String name, String email,
-                             String phone, String assignedExamID, String subject, String password) {
+                             String phone, int assignedExamID, String subject, String password) {
         this.moderatorID = moderatorID;
         this.name = name;
         this.email = email;
@@ -55,11 +55,11 @@ public class QuestionModerator implements Serializable {
         this.phone = phone;
     }
 
-    public String getAssignedExamID() {
+    public int getAssignedExamID() {
         return assignedExamID;
     }
 
-    public void setAssignedExamID(String assignedExamID) {
+    public void setAssignedExamID(int assignedExamID) {
         this.assignedExamID = assignedExamID;
     }
 

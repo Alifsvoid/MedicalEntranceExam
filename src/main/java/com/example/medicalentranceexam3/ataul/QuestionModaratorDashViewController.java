@@ -1,11 +1,13 @@
 package com.example.medicalentranceexam3.ataul;
 
 import com.example.medicalentranceexam3.LoggedInSession;
+import com.example.medicalentranceexam3.utils.SceneSwitcher;
 import javafx.event.ActionEvent;
 import javafx.scene.text.Text;
 
-public class QuestionModaratorDashViewController
-{
+import java.io.IOException;
+
+public class QuestionModaratorDashViewController {
     @javafx.fxml.FXML
     private Text emailText;
     @javafx.fxml.FXML
@@ -27,7 +29,8 @@ public class QuestionModaratorDashViewController
     }
 
     @javafx.fxml.FXML
-    public void handleAddQuestionButton(ActionEvent actionEvent) {
+    public void handleAddQuestionButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.sceneSwitch(actionEvent, "ataul/add-question-view.fxml", "Add Question");
     }
 
     @javafx.fxml.FXML
@@ -35,10 +38,18 @@ public class QuestionModaratorDashViewController
     }
 
     @javafx.fxml.FXML
-    public void handleAddOptionsButton(ActionEvent actionEvent) {
+    public void handleAddOptionsButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.sceneSwitch(actionEvent, "ataul/add-options-view.fxml", "Add Options");
+
     }
 
     @javafx.fxml.FXML
     public void handleDeleteQuestionButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleAddSubjectButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.sceneSwitch(actionEvent, "ataul/add-subject-view.fxml", "Add Subject");
+
     }
 }

@@ -39,7 +39,7 @@
       <Button layoutX="573.0" layoutY="236.0" mnemonicParsing="false" onAction="#handleEdicQuestionButton" prefHeight="34.0" prefWidth="214.0" text="Edit Question" />
       <Button layoutX="573.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleSetStatusButton" prefHeight="34.0" prefWidth="214.0" text="Set Question Status" />
       <Button layoutX="573.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleAssignedExamButton" prefHeight="34.0" prefWidth="214.0" text="Assigned Exam" />
-      <Button layoutX="573.0" layoutY="428.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="214.0" text="Button" />
+      <Button layoutX="573.0" layoutY="428.0" mnemonicParsing="false" onAction="#handleAddSubjectButton" prefHeight="34.0" prefWidth="214.0" text="Add Subject" />
       <Button layoutX="573.0" layoutY="487.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="214.0" text="Button" />
    </children>
 </AnchorPane>

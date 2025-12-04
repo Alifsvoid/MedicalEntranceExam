@@ -29,7 +29,7 @@ public class DummyDataGenerator {
         BinaryFileHelper.writeAllObjects(directorFile, directorArrayList);
 
 
-        questionModeratorArrayList.add(new QuestionModerator("a", "abc", "abc@gmail.com", "29387923", "12", "sdfj", "abc"));
+        questionModeratorArrayList.add(new QuestionModerator("a", "abc", "abc@gmail.com", "29387923", 1, "sdfj", "abc"));
         File moderatorFile = new File("data/questionModerators.bin");
         BinaryFileHelper.writeAllObjects(moderatorFile, questionModeratorArrayList);
 //        applicantList.add(new Applicant("A001","", LocalDate.of(2003, 5, 12), "01837384", "sldkjflaj@gmail.com", ""))

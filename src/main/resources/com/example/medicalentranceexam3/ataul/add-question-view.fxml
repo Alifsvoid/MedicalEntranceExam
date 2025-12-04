@@ -15,11 +15,11 @@
       <Text layoutX="106.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question:" />
       <Text layoutX="111.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject:" />
       <Button layoutX="96.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="26.0" prefWidth="150.0" text="Create" />
-      <TableView fx:id="QuestionTableView" layoutX="111.0" layoutY="363.0" prefHeight="200.0" prefWidth="446.0">
+      <TableView fx:id="QuestionTableView" layoutX="88.0" layoutY="306.0" prefHeight="200.0" prefWidth="446.0">
         <columns>
           <TableColumn fx:id="questionIdCol" prefWidth="75.0" text="Question ID" />
           <TableColumn fx:id="questionCol" prefWidth="264.80001068115234" text="Question" />
-            <TableColumn fx:id="subCol" prefWidth="106.39996337890625" text="Subject" />
+            <TableColumn fx:id="subCol" prefWidth="106.39996337890625" text="Dif Level" />
         </columns>
       </TableView>
       <TableView fx:id="optionsTableView" layoutX="628.0" layoutY="363.0" prefHeight="200.0" prefWidth="224.0">
@@ -41,5 +41,6 @@
       <TextField fx:id="questionID" layoutX="170.0" layoutY="86.0" prefHeight="26.0" prefWidth="163.0" />
       <Text layoutX="96.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question ID:" />
       <ComboBox fx:id="subjectComboBox" layoutX="171.0" layoutY="157.0" prefWidth="150.0" promptText="Subject" />
+      <Button layoutX="28.0" layoutY="543.0" mnemonicParsing="false" onAction="#handleBackButton" text="Back" />
    </children>
 </AnchorPane>

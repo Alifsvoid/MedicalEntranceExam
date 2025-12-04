@@ -86,6 +86,7 @@ public class LoginViewController {
                 List<Director> directors = BinaryFileHelper.readAllObjects(fileDirector);
                 for (Director d : directors) {
                     if (d.getEmail().equals(email) && d.getPassword().equals(password)) {
+                        System.out.println("hello");
                         LoggedInSession.setLoggedInDirector(d);
                         SceneSwitcher.sceneSwitch(actionEvent, "ataul/director-dash-view.fxml", "Dashboard");
                         return;
