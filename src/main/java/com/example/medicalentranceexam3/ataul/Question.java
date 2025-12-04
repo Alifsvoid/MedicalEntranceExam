@@ -13,10 +13,9 @@ public class Question {
     private String rejectReason;
 
 
-    public Question(int id, String text, ArrayList<Option> options, int correctOptionId, String status, String difficulty, String subject, String rejectReason) {
+    public Question(int id, String text, int correctOptionId, String status, String difficulty, String subject, String rejectReason) {
         this.id = id;
         this.text = text;
-        this.options = options;
         this.correctOptionId = correctOptionId;
         this.status = status;
         this.difficulty = difficulty;

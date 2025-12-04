@@ -2,6 +2,8 @@ package com.example.medicalentranceexam3;
 
 import com.example.medicalentranceexam3.alif.Accountant;
 import com.example.medicalentranceexam3.alif.Applicant;
+import com.example.medicalentranceexam3.ataul.Director;
+import com.example.medicalentranceexam3.ataul.QuestionModerator;
 import com.example.medicalentranceexam3.utils.BinaryFileHelper;
 
 import java.io.File;
@@ -19,7 +21,17 @@ public class DummyDataGenerator {
 
     public static void addDummyApplicants() {
         ArrayList<Applicant> applicantList = new ArrayList<>();
+        ArrayList<QuestionModerator> questionModeratorArrayList = new ArrayList<>();
+        ArrayList<Director> directorArrayList = new ArrayList<>();
 
+        directorArrayList.add(new Director("b", "def", "def@gmail.com", "0239023", "alskdj", "def"));
+        File directorFile = new File("data/directors.bin");
+        BinaryFileHelper.writeAllObjects(directorFile, directorArrayList);
+
+
+        questionModeratorArrayList.add(new QuestionModerator("a", "abc", "abc@gmail.com", "29387923", "12", "sdfj", "abc"));
+        File moderatorFile = new File("data/questionModerators.bin");
+        BinaryFileHelper.writeAllObjects(moderatorFile, questionModeratorArrayList);
 //        applicantList.add(new Applicant("A001","", LocalDate.of(2003, 5, 12), "01837384", "sldkjflaj@gmail.com", ""))
 
         applicantList.add(new Applicant("A001", "Alice Rahman", LocalDate.of(2003, 5, 12), "01710000001", "alice@example.com" , "pass123"));

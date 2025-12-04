@@ -13,7 +13,7 @@
 <AnchorPane prefHeight="650.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.alif.ApplicantDashViewController">
     <children>
         <!-- Top Title -->
-        <Text layoutX="35" layoutY="60" text="Accountant Dashboard">
+        <Text layoutX="35" layoutY="60" text="APPLICANT DASHBOARD">
             <font>
                 <Font name="Arial Black" size="30" />
             </font>
@@ -25,20 +25,20 @@
                 <DropShadow color="#b5b5b5" radius="10" />
             </effect>
 
-            <VBox alignment="CENTER" spacing="25">
+            <VBox alignment="CENTER" prefHeight="420.0" prefWidth="798.0" spacing="25">
                 <padding>
                     <Insets bottom="40" left="40" right="40" top="40" />
                 </padding>
 
                 <!-- Row 1 -->
                 <HBox alignment="CENTER" spacing="40">
-                    <Button onAction="#handleAddApplicantButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="APPLY">
+                    <Button onAction="#handleApplyForExamButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="APPLY FOR EXAM">
                         <font>
                             <Font size="16" />
                         </font>
                     </Button>
 
-                    <Button onAction="#handleEditApplicantButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="EDIT APPLICANT INFO">
+                    <Button onAction="#handleUpcomingExamButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="UPCOMING EXAMS">
                         <font>
                             <Font size="16" />
                         </font>
@@ -47,13 +47,13 @@
 
                 <!-- Row 2 -->
                 <HBox alignment="CENTER" spacing="40">
-                    <Button onAction="#handleDeleteApplicant" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="DELETE APPLICANT">
+                    <Button onAction="#handleEditProfileButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="EDIT PROFILE">
                         <font>
                             <Font size="16" />
                         </font>
                     </Button>
 
-                    <Button onAction="#handleUpdatePaymentButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="UPDATE PAYMENT STATUS">
+                    <Button onAction="#handleProfileButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="PROFILE">
                         <font>
                             <Font size="16" />
                         </font>
@@ -62,13 +62,13 @@
 
                 <!-- Row 3 -->
                 <HBox alignment="CENTER" spacing="40">
-                    <Button onAction="#handleGenerateAdmitButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="GENERATE ADMIT CARD">
+                    <Button onAction="#handleAdmitCardButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="ADMIT CARD">
                         <font>
                             <Font size="16" />
                         </font>
                     </Button>
 
-                    <Button onAction="#handleSeatPlanButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="SEAT PLAN">
+                    <Button onAction="#handleEditChosenSubButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="EDIT CHOSEN SUBJECT">
                         <font>
                             <Font size="16" />
                         </font>
@@ -76,13 +76,13 @@
                 </HBox>
 
                 <HBox alignment="CENTER" spacing="40">
-                    <Button onAction="#handleNotificaitonButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="SEND NOTIFICATION">
+                    <Button onAction="#handleNotificationButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="NOTIFICATIONS">
                         <font>
                             <Font size="16" />
                         </font>
                     </Button>
 
-                    <Button onAction="#handleAppliedApplicantButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="APPLIED APPLICANT">
+                    <Button onAction="#handleSubmitFeedbackButton" prefHeight="55" prefWidth="300" style="-fx-background-color: #1e1e1e; -fx-text-fill: white; -fx-background-radius: 12;" text="SUBMT FEEDBACK">
                         <font>
                             <Font size="16" />
                         </font>

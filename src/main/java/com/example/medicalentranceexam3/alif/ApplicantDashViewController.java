@@ -8,39 +8,71 @@ public class ApplicantDashViewController
     public void initialize() {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleAppliedApplicantButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleGenerateAdmitButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleDeleteApplicant(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleEditApplicantButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleUpdatePaymentButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleNotificaitonButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleAddApplicantButton(ActionEvent actionEvent) {
     }
 
-    @javafx.fxml.FXML
+    @Deprecated
     public void handleSeatPlanButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
     public void handleLogOutButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleUpcomingExamButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleApplyForExamButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleEditProfileButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleSubmitFeedbackButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleNotificationButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleProfileButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleAdmitCardButton(ActionEvent actionEvent) {
+    }
+
+    @javafx.fxml.FXML
+    public void handleEditChosenSubButton(ActionEvent actionEvent) {
     }
 }
