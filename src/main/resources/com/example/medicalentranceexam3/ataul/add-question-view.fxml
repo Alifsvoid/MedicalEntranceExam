@@ -12,19 +12,9 @@
 <AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.ataul.AddQuestionView">
    <children>
       <TextField fx:id="questionTextField" layoutX="171.0" layoutY="122.0" prefHeight="26.0" prefWidth="621.0" />
-      <TextField fx:id="op1TextField" layoutX="171.0" layoutY="186.0" prefHeight="26.0" prefWidth="163.0" />
-      <TextField fx:id="op2TextField" layoutX="171.0" layoutY="220.0" prefHeight="26.0" prefWidth="163.0" />
-      <TextField fx:id="op3TextField" layoutX="171.0" layoutY="253.0" prefHeight="26.0" prefWidth="163.0" />
-      <TextField fx:id="op4TextField" layoutX="171.0" layoutY="291.0" prefHeight="26.0" prefWidth="163.0" />
       <Text layoutX="106.0" layoutY="140.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question:" />
-      <Text layoutX="112.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 1:" />
-      <Text layoutX="112.0" layoutY="238.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 2:" />
-      <Text layoutX="112.0" layoutY="271.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 3:" />
-      <Text layoutX="112.0" layoutY="309.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Option 4:" />
-      <ComboBox fx:id="answerComboBox" layoutX="371.0" layoutY="187.0" prefWidth="150.0" promptText="Answer" />
-      <TextField fx:id="subjectTextField" layoutX="628.0" layoutY="186.0" prefHeight="26.0" prefWidth="163.0" />
-      <Text layoutX="569.0" layoutY="204.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject:" />
-      <Button layoutX="371.0" layoutY="292.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="26.0" prefWidth="150.0" text="Create" />
+      <Text layoutX="111.0" layoutY="174.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject:" />
+      <Button layoutX="96.0" layoutY="212.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="26.0" prefWidth="150.0" text="Create" />
       <TableView fx:id="QuestionTableView" layoutX="111.0" layoutY="363.0" prefHeight="200.0" prefWidth="446.0">
         <columns>
           <TableColumn fx:id="questionIdCol" prefWidth="75.0" text="Question ID" />
@@ -39,15 +29,17 @@
             <TableColumn prefWidth="224.0" text="Subject" />
          </columns>
       </TableView>
-      <TextField fx:id="questionIdTextField" layoutX="694.0" layoutY="267.0" prefHeight="26.0" prefWidth="163.0" />
       <Text layoutX="614.0" layoutY="285.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QuestionID:" />
       <Button layoutX="693.0" layoutY="306.0" mnemonicParsing="false" onAction="#handleSeeOptionButton" prefHeight="26.0" prefWidth="150.0" text="See options" />
-      <TextField fx:id="questionID" layoutX="165.0" layoutY="86.0" prefHeight="26.0" prefWidth="163.0" />
-      <Text layoutX="91.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question ID:" />
       <Text layoutX="48.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create Question">
          <font>
             <Font name="Berlin Sans FB" size="29.0" />
          </font>
       </Text>
+      <TextField fx:id="questionIdTextField" layoutX="686.0" layoutY="267.0" prefHeight="26.0" prefWidth="163.0" />
+      <ComboBox fx:id="diffLevelComboBox" layoutX="357.0" layoutY="157.0" prefWidth="150.0" promptText="Difficulty Level" />
+      <TextField fx:id="questionID" layoutX="170.0" layoutY="86.0" prefHeight="26.0" prefWidth="163.0" />
+      <Text layoutX="96.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Question ID:" />
+      <ComboBox fx:id="subjectComboBox" layoutX="171.0" layoutY="157.0" prefWidth="150.0" promptText="Subject" />
    </children>
 </AnchorPane>

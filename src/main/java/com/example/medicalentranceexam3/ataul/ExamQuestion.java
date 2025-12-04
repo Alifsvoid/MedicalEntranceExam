@@ -1,6 +1,8 @@
 package com.example.medicalentranceexam3.ataul;
 
-public class ExamQuestion {
+import java.io.Serializable;
+
+public class ExamQuestion implements Serializable {
     private int id;
     private int examId;
     private int questionId;

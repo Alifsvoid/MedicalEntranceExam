@@ -1,26 +1,24 @@
 package com.example.medicalentranceexam3.ataul;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Question {
+public class Question implements Serializable {
     private int id;
     private String text;
     private ArrayList<Option> options;
     private int correctOptionId;
     private String status;
     private String difficulty;
-    private String subject;
-    private String rejectReason;
+    private Subject subject;
 
 
-    public Question(int id, String text, int correctOptionId, String status, String difficulty, String subject, String rejectReason) {
+    public Question(int id, String text, String status, String difficulty, Subject subject) {
         this.id = id;
         this.text = text;
-        this.correctOptionId = correctOptionId;
         this.status = status;
         this.difficulty = difficulty;
         this.subject = subject;
-        this.rejectReason = rejectReason;
     }
 
     public int getId() {
@@ -71,21 +69,14 @@ public class Question {
         this.difficulty = difficulty;
     }
 
-    public String getSubject() {
+    public Subject getSubject() {
         return subject;
     }
 
-    public void setSubject(String subject) {
+    public void setSubject(Subject subject) {
         this.subject = subject;
     }
 
-    public String getRejectReason() {
-        return rejectReason;
-    }
-
-    public void setRejectReason(String rejectReason) {
-        this.rejectReason = rejectReason;
-    }
 
 
     @Override
@@ -97,8 +88,6 @@ public class Question {
                 ", correctOptionId=" + correctOptionId +
                 ", status='" + status + '\'' +
                 ", difficulty='" + difficulty + '\'' +
-                ", subject='" + subject + '\'' +
-                ", rejectReason='" + rejectReason + '\'' +
                 '}';
     }
 }

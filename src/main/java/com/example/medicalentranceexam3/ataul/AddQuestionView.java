@@ -13,33 +13,25 @@ public class AddQuestionView
     @javafx.fxml.FXML
     private TextField questionID;
     @javafx.fxml.FXML
-    private TextField op1TextField;
-    @javafx.fxml.FXML
     private TableView optionsTableView;
     @javafx.fxml.FXML
     private TextField questionTextField;
     @javafx.fxml.FXML
     private TableColumn questionIdCol;
     @javafx.fxml.FXML
-    private TextField op4TextField;
-    @javafx.fxml.FXML
     private TableColumn optionsCol;
-    @javafx.fxml.FXML
-    private TextField op3TextField;
     @javafx.fxml.FXML
     private TableView QuestionTableView;
     @javafx.fxml.FXML
     private TableColumn optionIdCol;
     @javafx.fxml.FXML
-    private TextField subjectTextField;
-    @javafx.fxml.FXML
-    private ComboBox answerComboBox;
-    @javafx.fxml.FXML
     private TableColumn subCol;
     @javafx.fxml.FXML
-    private TextField op2TextField;
-    @javafx.fxml.FXML
     private TextField questionIdTextField;
+    @javafx.fxml.FXML
+    private ComboBox subjectComboBox;
+    @javafx.fxml.FXML
+    private ComboBox diffLevelComboBox;
 
     @javafx.fxml.FXML
     public void initialize() {

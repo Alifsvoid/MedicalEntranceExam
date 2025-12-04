@@ -1,6 +1,8 @@
 package com.example.medicalentranceexam3.ataul;
 
-public class Option {
+import java.io.Serializable;
+
+public class Option implements Serializable {
     private int id;
     private String text;
 

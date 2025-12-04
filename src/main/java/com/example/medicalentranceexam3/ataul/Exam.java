@@ -1,8 +1,9 @@
 package com.example.medicalentranceexam3.ataul;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
-public class Exam {
+public class Exam implements Serializable {
     private int id;
     private String title;          // "Medical Admission Test 2025"
     private String status;         // Draft, Approved, Published
