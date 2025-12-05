@@ -15,13 +15,11 @@ public class QuestionModaratorDashViewController {
 
     @javafx.fxml.FXML
     public void initialize() {
-        QuestionModerator qm = LoggedInSession.getLoggedInQuestionModerator();
-        nameText.setText(qm.getName());
-        emailText.setText(qm.getEmail());
     }
 
     @javafx.fxml.FXML
-    public void handleSetStatusButton(ActionEvent actionEvent) {
+    public void handleSetStatusButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.sceneSwitch(actionEvent, "ataul/set-question-status-view.fxml", "Set Status");
     }
 
     @javafx.fxml.FXML
@@ -34,7 +32,8 @@ public class QuestionModaratorDashViewController {
     }
 
     @javafx.fxml.FXML
-    public void handleEdicQuestionButton(ActionEvent actionEvent) {
+    public void handleEdicQuestionButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.sceneSwitch(actionEvent, "ataul/edit-question-view.fxml", "Edit Question");
     }
 
     @javafx.fxml.FXML
@@ -44,7 +43,8 @@ public class QuestionModaratorDashViewController {
     }
 
     @javafx.fxml.FXML
-    public void handleDeleteQuestionButton(ActionEvent actionEvent) {
+    public void handleDeleteQuestionButton(ActionEvent actionEvent) throws IOException {
+        SceneSwitcher.sceneSwitch(actionEvent, "ataul/delete-question-view.fxml", "Add Options");
     }
 
     @javafx.fxml.FXML

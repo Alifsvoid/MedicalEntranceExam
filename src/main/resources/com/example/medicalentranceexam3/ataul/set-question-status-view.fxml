@@ -6,11 +6,12 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.ataul.AddQuestionView">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.ataul.SetQuestionStatusView">
    <children>
       <ComboBox fx:id="statusComboBox" layoutX="417.0" layoutY="240.0" prefHeight="26.0" prefWidth="163.0" promptText="Question Status" />
       <Button layoutX="417.0" layoutY="300.0" mnemonicParsing="false" onAction="#handleSetButton" prefHeight="26.0" prefWidth="163.0" text="Set" />
       <TextField fx:id="questionIdTextField" layoutX="417.0" layoutY="196.0" prefHeight="26.0" prefWidth="163.0" />
       <Text layoutX="337.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QuestionID:" />
+      <Button layoutX="48.0" layoutY="516.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="26.0" prefWidth="102.0" text="Back" />
    </children>
 </AnchorPane>

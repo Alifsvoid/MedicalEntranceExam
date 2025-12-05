@@ -5,12 +5,13 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.ataul.AddQuestionView">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.ataul.AssignSubjectView">
    <children>
-      <TextField fx:id="subjectTextField" layoutX="347.0" layoutY="261.0" prefHeight="26.0" prefWidth="163.0" />
+      <TextField fx:id="subjectID" layoutX="347.0" layoutY="261.0" prefHeight="26.0" prefWidth="163.0" />
       <Text layoutX="288.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Subject:" />
       <Button layoutX="346.0" layoutY="314.0" mnemonicParsing="false" onAction="#handleAssigneSubjectButton" prefHeight="26.0" prefWidth="163.0" text="Assign" />
       <TextField fx:id="questionIdTextField" layoutX="346.0" layoutY="222.0" prefHeight="26.0" prefWidth="163.0" />
       <Text layoutX="266.0" layoutY="240.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QuestionID:" />
+      <Button layoutX="50.0" layoutY="530.0" mnemonicParsing="false" onAction="#handBackButton" prefHeight="26.0" prefWidth="103.0" text="Prev" />
    </children>
 </AnchorPane>

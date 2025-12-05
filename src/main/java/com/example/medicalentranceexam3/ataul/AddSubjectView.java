@@ -1,5 +1,6 @@
 package com.example.medicalentranceexam3.ataul;
 
+import com.example.medicalentranceexam3.LoggedInSession;
 import com.example.medicalentranceexam3.utils.BinaryFileHelper;
 import com.example.medicalentranceexam3.utils.SceneSwitcher;
 import javafx.collections.FXCollections;
@@ -58,7 +59,13 @@ public class AddSubjectView {
     @Deprecated
     public void handleBackButton(ActionEvent event) throws IOException {
         // Example back button, adjust FXML path as needed
+        if(LoggedInSession.getLoggedInQuestionModerator() == null){
+
+        SceneSwitcher.sceneSwitch(event, "ataul/director-dash-view.fxml", "Dashboard");
+        } else {
+
         SceneSwitcher.sceneSwitch(event, "ataul/question-modarator-dash-view.fxml", "Dashboard");
+        }
     }
 
     @FXML

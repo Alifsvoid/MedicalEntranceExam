@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.ataul.AddQuestionView">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.ataul.EditQuestionView">
    <children>
       <TextField fx:id="questionTextField" layoutX="220.0" layoutY="202.0" prefHeight="26.0" prefWidth="621.0" />
       <TextField fx:id="op1TextField" layoutX="220.0" layoutY="266.0" prefHeight="26.0" prefWidth="163.0" />
@@ -22,5 +22,6 @@
       <TextField fx:id="questionIdTextField" layoutX="235.0" layoutY="155.0" prefHeight="26.0" prefWidth="163.0" />
       <Text layoutX="155.0" layoutY="173.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QuestionID:" />
       <Button layoutX="420.0" layoutY="371.0" mnemonicParsing="false" onAction="#handleUpdateButton" prefHeight="26.0" prefWidth="150.0" text="Update" />
+      <Button layoutX="39.0" layoutY="544.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="26.0" prefWidth="106.0" text="Back" />
    </children>
 </AnchorPane>
