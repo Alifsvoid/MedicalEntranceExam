@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="720.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.medicalentranceexam3.sabbir.EvaluateAnswerView">
+
+    <children>
+
+        <!-- BACK BUTTON -->
+        <Button text="← Back"
+                layoutX="20" layoutY="20"
+                fx:id="backButton"
+                onAction="#handleBackButton"/>
+
+        <VBox alignment="TOP_CENTER" spacing="20"
+              layoutX="0" layoutY="50"
+              prefWidth="720">
+
+            <!-- TITLE -->
+            <Text text="Evaluate Answer Script"
+                  style="-fx-font-size: 24px; -fx-font-weight: bold;"/>
+
+            <!-- CARD -->
+            <VBox spacing="15" maxWidth="550"
+                  style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10;">
+
+                <children>
+
+                    <!-- GRID LAYOUT -->
+                    <GridPane hgap="15" vgap="12">
+                        <columnConstraints>
+                            <ColumnConstraints prefWidth="140"/>
+                            <ColumnConstraints prefWidth="280"/>
+                        </columnConstraints>
+
+                        <!-- Candidate ID -->
+                        <Label text="Candidate ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="candidateIdField" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <!-- Q1 -->
+                        <Label text="Marks Q1:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="q1Field" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <!-- Q2 -->
+                        <Label text="Marks Q2:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="q2Field" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+                        <!-- Q3 -->
+                        <Label text="Marks Q3:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                        <TextField fx:id="q3Field" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+                        <!-- Q4 -->
+                        <Label text="Marks Q4:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                        <TextField fx:id="q4Field" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+                        <!-- Q5 -->
+                        <Label text="Marks Q5:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                        <TextField fx:id="q5Field" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+
+                        <!-- Notes -->
+                        <Label text="Notes:" GridPane.rowIndex="6" GridPane.columnIndex="0"/>
+                        <TextArea fx:id="noteField" prefHeight="80"
+                                  GridPane.rowIndex="6" GridPane.columnIndex="1"/>
+
+                        <!-- Marking Status -->
+                        <Label text="Marking Status:" GridPane.rowIndex="7" GridPane.columnIndex="0"/>
+                        <ComboBox fx:id="statusCombo" GridPane.rowIndex="7" GridPane.columnIndex="1"/>
+
+                    </GridPane>
+
+                    <!-- Buttons -->
+                    <HBox alignment="CENTER" spacing="20">
+                        <children>
+                            <Button text="Save Marks" fx:id="saveButton"/>
+                            <Button text="Submit Final" fx:id="submitFinalButton"/>
+                            <Button text="Flag Script" fx:id="flagButton"/>
+                        </children>
+                    </HBox>
+
+                </children>
+            </VBox>
+
+        </VBox>
+
+    </children>
+</AnchorPane>

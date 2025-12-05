@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="720.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.medicalentranceexam3.sabbir.EnterMarksView">
+
+    <children>
+
+        <!-- Back Button -->
+        <Button text="← Back"
+                layoutX="20" layoutY="20"
+                fx:id="backButton"
+                onAction="#handleBackButton" />
+
+        <!-- Main Layout -->
+        <VBox alignment="TOP_CENTER" spacing="20"
+              layoutX="0" layoutY="50"
+              prefWidth="720">
+
+            <!-- Title -->
+            <Text text="Enter Marks for Each Question"
+                  style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <!-- Card -->
+            <VBox spacing="15" maxWidth="550"
+                  style="-fx-background-color: white; -fx-padding: 20; -fx-background-radius: 10;">
+
+                <children>
+
+                    <!-- Grid Form -->
+                    <GridPane hgap="15" vgap="12">
+                        <columnConstraints>
+                            <ColumnConstraints prefWidth="180" />
+                            <ColumnConstraints prefWidth="280" />
+                        </columnConstraints>
+
+                        <!-- Candidate ID -->
+                        <Label text="Candidate ID:" GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                        <TextField fx:id="candidateIdField" GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                        <!-- Total Questions -->
+                        <Label text="Total Questions:" GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                        <TextField fx:id="totalQuestionsField" GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                        <!-- Full Marks -->
+                        <Label text="Full Marks per Question:" GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                        <TextField fx:id="fullMarksField" GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                        <!-- Question Number -->
+                        <Label text="Question Number:" GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                        <TextField fx:id="questionNumberField" GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+                        <!-- Marks Obtained -->
+                        <Label text="Marks Obtained:" GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                        <TextField fx:id="marksObtainedField" GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+                        <!-- Optional Comment -->
+                        <Label text="Comment:" GridPane.rowIndex="5" GridPane.columnIndex="0" />
+                        <TextArea fx:id="commentField"
+                                  prefHeight="70"
+                                  GridPane.rowIndex="5" GridPane.columnIndex="1" />
+
+                    </GridPane>
+
+                    <!-- Buttons -->
+                    <HBox alignment="CENTER" spacing="20">
+                        <children>
+                            <Button text="Save Entry" fx:id="saveEntryButton" />
+                            <Button text="Next Question" fx:id="nextQuestionButton" />
+                            <Button text="Finish All" fx:id="finishAllButton" />
+                        </children>
+                    </HBox>
+
+                </children>
+            </VBox>
+
+        </VBox>
+
+    </children>
+</AnchorPane>

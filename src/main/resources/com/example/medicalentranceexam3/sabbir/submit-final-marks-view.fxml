@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="720.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.medicalentranceexam3.sabbir.SubmitFinalMarksView">
+
+    <children>
+
+        <!-- Back Button -->
+        <Button text="← Back"
+                layoutX="20" layoutY="20"
+                fx:id="backButton"
+                onAction="#handleBackButton" />
+
+        <!-- Main VBox -->
+        <VBox alignment="TOP_CENTER"
+              spacing="20"
+              layoutX="0" layoutY="50"
+              prefWidth="720">
+
+            <!-- Title -->
+            <Text text="Submit Final Marks for Candidate"
+                  style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <!-- Card Container -->
+            <VBox spacing="15" maxWidth="550"
+                  style="-fx-background-color: white;
+                         -fx-padding: 20;
+                         -fx-background-radius: 10;">
+
+                <children>
+
+                    <!-- Grid Form -->
+                    <GridPane hgap="15" vgap="12">
+                        <columnConstraints>
+                            <ColumnConstraints prefWidth="200" />
+                            <ColumnConstraints prefWidth="280" />
+                        </columnConstraints>
+
+                        <!-- Candidate ID -->
+                        <Label text="Candidate ID:"
+                               GridPane.rowIndex="0" GridPane.columnIndex="0" />
+                        <TextField fx:id="candidateIdField"
+                                   GridPane.rowIndex="0" GridPane.columnIndex="1" />
+
+                        <!-- Total Questions -->
+                        <Label text="Total Questions:"
+                               GridPane.rowIndex="1" GridPane.columnIndex="0" />
+                        <TextField fx:id="totalQuestionsField"
+                                   GridPane.rowIndex="1" GridPane.columnIndex="1" />
+
+                        <!-- Total Marks Calculated -->
+                        <Label text="Total Marks Obtained:"
+                               GridPane.rowIndex="2" GridPane.columnIndex="0" />
+                        <TextField fx:id="totalMarksField"
+                                   editable="false"
+                                   GridPane.rowIndex="2" GridPane.columnIndex="1" />
+
+                        <!-- Maximum Possible Marks -->
+                        <Label text="Full Exam Marks:"
+                               GridPane.rowIndex="3" GridPane.columnIndex="0" />
+                        <TextField fx:id="fullExamMarksField"
+                                   editable="false"
+                                   GridPane.rowIndex="3" GridPane.columnIndex="1" />
+
+                        <!-- Evaluation Status -->
+                        <Label text="Evaluation Status:"
+                               GridPane.rowIndex="4" GridPane.columnIndex="0" />
+                        <TextField fx:id="evaluationStatusField"
+                                   editable="false"
+                                   GridPane.rowIndex="4" GridPane.columnIndex="1" />
+
+                        <!-- Remarks -->
+                        <Label text="Remarks:"
+                               GridPane.rowIndex="5" GridPane.columnIndex="0" />
+                        <TextArea fx:id="remarksField"
+                                  prefHeight="70"
+                                  GridPane.rowIndex="5" GridPane.columnIndex="1" />
+
+                    </GridPane>
+
+                    <!-- Buttons -->
+                    <HBox alignment="CENTER" spacing="20">
+                        <children>
+                            <Button text="Calculate Final Marks"
+                                    fx:id="calculateMarksButton" />
+
+                            <Button text="Submit to Database"
+                                    fx:id="submitFinalMarksButton" />
+                        </children>
+                    </HBox>
+
+                </children>
+
+            </VBox>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

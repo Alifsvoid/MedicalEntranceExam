@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="720.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.medicalentranceexam3.sabbir.FlagScriptView">
+
+    <children>
+
+        <!-- Back Button -->
+        <Button text="← Back"
+                layoutX="20" layoutY="20"
+                fx:id="backButton"
+                onAction="#handleBackButton" />
+
+        <!-- Main Layout -->
+        <VBox alignment="TOP_CENTER"
+              spacing="20"
+              layoutX="0" layoutY="50"
+              prefWidth="720">
+
+            <!-- Title -->
+            <Text text="Flag Suspicious or Invalid Scripts"
+                  style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <!-- Card Container -->
+            <VBox spacing="15" maxWidth="650"
+                  style="-fx-background-color: white;
+                         -fx-padding: 20;
+                         -fx-background-radius: 10;">
+
+                <children>
+
+                    <!-- Split Layout: Candidate Info + Flag Form -->
+                    <HBox spacing="25" alignment="TOP_CENTER">
+
+                        <!-- Candidate Info -->
+                        <VBox spacing="12" prefWidth="300">
+                            <children>
+                                <Label text="Candidate Information"
+                                       style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+
+                                <Label text="Candidate ID:"/>
+                                <TextField fx:id="candidateIdField" editable="false"/>
+
+                                <Label text="Name:"/>
+                                <TextField fx:id="candidateNameField" editable="false"/>
+
+                                <Label text="Exam Type:"/>
+                                <TextField fx:id="examTypeField" editable="false"/>
+                            </children>
+                        </VBox>
+
+                        <!-- Flag Form -->
+                        <VBox spacing="12" prefWidth="300">
+                            <children>
+                                <Label text="Flag Script"
+                                       style="-fx-font-weight: bold; -fx-font-size: 16px;"/>
+
+                                <Label text="Flag Type:"/>
+                                <ComboBox fx:id="flagTypeCombo" promptText="Select Type"/>
+
+                                <Label text="Description / Notes:"/>
+                                <TextArea fx:id="descriptionField" prefHeight="100"
+                                          promptText="Provide reason for flagging"/>
+
+                                <CheckBox fx:id="invalidCheckBox" text="Mark as Invalid Script"/>
+                            </children>
+                        </VBox>
+
+                    </HBox>
+
+                    <!-- Action Buttons -->
+                    <HBox alignment="CENTER" spacing="20">
+                        <children>
+                            <Button text="Flag Script" fx:id="flagButton" />
+                            <Button text="Reset Form" fx:id="resetButton" />
+                        </children>
+                    </HBox>
+
+                </children>
+
+            </VBox>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

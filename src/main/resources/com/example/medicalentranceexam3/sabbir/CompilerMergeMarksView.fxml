@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="720.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.medicalentranceexam3.sabbir.CompilerMergeMarksView">
+
+    <children>
+
+        <!-- Back Button -->
+        <Button text="← Back"
+                layoutX="20" layoutY="20"
+                fx:id="backButton"
+                onAction="#handleBackButton"
+                style="-fx-background-color: #06A3DA; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+        <!-- Main Layout -->
+        <VBox alignment="TOP_CENTER"
+              spacing="20"
+              layoutX="0" layoutY="50"
+              prefWidth="720">
+
+            <!-- Page Title -->
+            <Text text="Validate and Merge Marks into Master Sheet"
+                  style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <!-- Card Container -->
+            <VBox spacing="15" maxWidth="650"
+                  style="-fx-background-color: white;
+                         -fx-padding: 20;
+                         -fx-background-radius: 12;">
+
+                <children>
+
+                    <!-- Step 1: Fetched Evaluator Sheets -->
+                    <VBox spacing="10">
+                        <Label text="Fetched Evaluator Sheets" style="-fx-font-weight: bold;"/>
+                        <TableView fx:id="evaluatorSheetsTable" prefHeight="180">
+                            <columns>
+                                <TableColumn fx:id="evaluatorCol" text="Evaluator Name" prefWidth="200"/>
+                                <TableColumn fx:id="sheetStatusCol" text="Status" prefWidth="150"/>
+                                <TableColumn fx:id="recordsCol" text="Records" prefWidth="150"/>
+                            </columns>
+                        </TableView>
+                    </VBox>
+
+                    <!-- Step 2: Validation Log -->
+                    <VBox spacing="10">
+                        <Label text="Validation Log" style="-fx-font-weight: bold;"/>
+                        <TextArea fx:id="validationLogArea" prefHeight="120" editable="false"
+                                  promptText="Missing data / duplicates will be shown here"/>
+                    </VBox>
+
+                    <!-- Action Buttons -->
+                    <HBox alignment="CENTER" spacing="20">
+                        <children>
+                            <Button text="Merge Verified Data" fx:id="mergeButton"
+                                    style="-fx-background-color: #4E6BFF; -fx-text-fill: white; -fx-background-radius: 10;"/>
+                            <Button text="Save Master Result" fx:id="saveButton"
+                                    style="-fx-background-color: #2EC971; -fx-text-fill: white; -fx-background-radius: 10;"/>
+                            <Button text="Refresh" fx:id="refreshButton"
+                                    style="-fx-background-color: #FFB74D; -fx-text-fill: white; -fx-background-radius: 10;"/>
+                        </children>
+                    </HBox>
+
+                </children>
+            </VBox>
+
+        </VBox>
+
+    </children>
+</AnchorPane>

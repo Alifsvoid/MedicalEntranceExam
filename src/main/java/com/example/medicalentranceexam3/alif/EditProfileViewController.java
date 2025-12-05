@@ -1,102 +1,40 @@
 package com.example.medicalentranceexam3.alif;
-
-import com.example.medicalentranceexam3.LoggedInSession;
-import com.example.medicalentranceexam3.utils.BinaryFileHelper;
-import com.example.medicalentranceexam3.utils.SceneSwitcher;
 import javafx.event.ActionEvent;
-import javafx.fxml.FXML;
 import javafx.scene.control.*;
-
-import java.io.File;
-import java.io.IOException;
-import java.util.List;
-
-public class EditProfileViewController {
-
-    @FXML
+public class EditProfileViewController
+{
+    @javafx.fxml.FXML
     private TextField idField;
-    @FXML
+    @javafx.fxml.FXML
+    private Button cancelButton;
+    @javafx.fxml.FXML
+    private Button backButton;
+    @javafx.fxml.FXML
     private TextField nameField;
-    @FXML
-    private DatePicker dobPicker;
-    @FXML
-    private TextField phoneField;
-    @FXML
+    @javafx.fxml.FXML
     private TextField emailField;
-    @FXML
+    @javafx.fxml.FXML
     private PasswordField passwordField;
+    @javafx.fxml.FXML
+    private Button saveButton;
+    @javafx.fxml.FXML
+    private DatePicker dobPicker;
+    @javafx.fxml.FXML
+    private TextField phoneField;
 
-    private final File FILE = new File("data/applicants.bin");
-
-    @FXML
+    @javafx.fxml.FXML
     public void initialize() {
-        loadApplicant();
     }
 
-    private void loadApplicant() {
-        Applicant applicant = LoggedInSession.getLoggedInApplicant();
-
-        if (applicant == null) {
-            showAlert("Error", "No logged-in applicant found!");
-            return;
-        }
-
-        idField.setText(applicant.getApplicantID());
-        nameField.setText(applicant.getName());
-        dobPicker.setValue(applicant.getDob());
-        phoneField.setText(applicant.getPhone());
-        emailField.setText(applicant.getEmail());
-        passwordField.setText(applicant.getPassword());
+    @javafx.fxml.FXML
+    public void onBack(ActionEvent actionEvent) {
     }
 
-    @FXML
-    private void onSave() {
-        List<Object> allApplicants = BinaryFileHelper.readAllObjects(FILE);
-
-        Applicant logged = LoggedInSession.getLoggedInApplicant();
-
-        for (Object obj : allApplicants) {
-            if (obj instanceof Applicant) {
-                Applicant a = (Applicant) obj;
-
-                if (a.getApplicantID().equals(logged.getApplicantID())) {
-
-                    a.setName(nameField.getText());
-                    a.setDob(dobPicker.getValue());
-                    a.setPhone(phoneField.getText());
-                    a.setEmail(emailField.getText());
-                    a.setPassword(passwordField.getText());
-
-                    // Update session
-                    LoggedInSession.setLoggedInApplicant(a);
-
-                    break;
-                }
-            }
-        }
-
-        BinaryFileHelper.writeAllObjects(FILE, allApplicants);
-
-        showAlert("Success", "Profile updated successfully!");
+    @javafx.fxml.FXML
+    public void onSave(ActionEvent actionEvent) {
     }
 
-    @FXML
-    private void onCancel(ActionEvent actionEvent) {
-//        SceneSwitcher.switchTo("ApplicantProfileView.fxml");
-    }
-
-    @FXML
-    private void onBack(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.sceneSwitch(actionEvent, "alif/applicant-dash-view.fxml", "Dashboard");
-    }
-
-
-
-    private void showAlert(String title, String msg) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(msg);
-        alert.show();
+    @javafx.fxml.FXML
+    public void onCancel(ActionEvent actionEvent) {
     }
 }

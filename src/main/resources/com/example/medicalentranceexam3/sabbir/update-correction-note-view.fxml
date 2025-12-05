@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="500.0" prefWidth="720.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.medicalentranceexam3.sabbir.UpdateCorrectionNotesView">
+
+    <children>
+
+        <!-- Back Button -->
+        <Button text="← Back"
+                layoutX="20" layoutY="20"
+                fx:id="backButton"
+                onAction="#handleBackButton"
+                style="-fx-background-color: #06A3DA; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+        <!-- Main Layout -->
+        <VBox alignment="TOP_CENTER"
+              spacing="20"
+              layoutX="0" layoutY="50"
+              prefWidth="720">
+
+            <!-- Title -->
+            <Text text="Update Answer Correction Notes"
+                  style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <!-- Card Container -->
+            <VBox spacing="15" maxWidth="600"
+                  style="-fx-background-color: white;
+                         -fx-padding: 20;
+                         -fx-background-radius: 12;">
+
+                <children>
+
+                    <!-- Candidate Info Grid -->
+                    <GridPane hgap="15" vgap="12">
+                        <columnConstraints>
+                            <ColumnConstraints prefWidth="150"/>
+                            <ColumnConstraints prefWidth="300"/>
+                        </columnConstraints>
+
+                        <Label text="Candidate ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                        <TextField fx:id="candidateIdField" editable="false"
+                                   GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+                        <Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                        <TextField fx:id="candidateNameField" editable="false"
+                                   GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+                        <Label text="Exam Type:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                        <TextField fx:id="examTypeField" editable="false"
+                                   GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                    </GridPane>
+
+                    <!-- Correction Notes TextArea -->
+                    <VBox spacing="8">
+                        <children>
+                            <Label text="Correction Notes:" style="-fx-font-weight: bold;"/>
+                            <TextArea fx:id="correctionNotesField"
+                                      prefHeight="120"
+                                      promptText="Enter notes or updates here"/>
+                        </children>
+                    </VBox>
+
+                    <!-- Action Buttons with Color -->
+                    <HBox alignment="CENTER" spacing="20">
+                        <children>
+                            <Button text="Save Notes" fx:id="saveButton"
+                                    style="-fx-background-color: #4E6BFF; -fx-text-fill: white; -fx-background-radius: 10;"/>
+                            <Button text="Reset" fx:id="resetButton"
+                                    style="-fx-background-color: #FFB74D; -fx-text-fill: white; -fx-background-radius: 10;"/>
+                        </children>
+                    </HBox>
+
+                </children>
+            </VBox>
+
+        </VBox>
+
+    </children>
+
+</AnchorPane>

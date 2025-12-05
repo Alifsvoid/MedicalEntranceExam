@@ -1,40 +1,22 @@
 package com.example.medicalentranceexam3.alif;
-
-import com.example.medicalentranceexam3.LoggedInSession;
-import com.example.medicalentranceexam3.utils.SceneSwitcher;
 import javafx.event.ActionEvent;
-
-import java.io.IOException;
-
+import javafx.scene.control.*;
 public class ApplicantDashViewController
 {
     @javafx.fxml.FXML
     public void initialize() {
     }
 
-
-
     @javafx.fxml.FXML
-    public void handleLogOutButton(ActionEvent actionEvent) throws IOException{
-        SceneSwitcher.sceneSwitch(actionEvent, "login-view.fxml", "Log in");
-        LoggedInSession.setLoggedInApplicant(null);
+    public void handleUpcomingExamButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void handleUpcomingExamButton(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.sceneSwitch(actionEvent, "alif/upcoming-exam-view.fxml", "Upcoming Exams");
+    public void handleApplyForExamButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void handleApplyForExamButton(ActionEvent actionEvent) throws IOException {
-        //
-        SceneSwitcher.sceneSwitch(actionEvent, "alif/apply-exam-view.fxml", "Apply for Exam");
-    }
-
-    @javafx.fxml.FXML
-    public void handleEditProfileButton(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.sceneSwitch(actionEvent, "alif/edit-profile-view.fxml", "Apply for Exam");
-
+    public void handleEditProfileButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
@@ -42,20 +24,19 @@ public class ApplicantDashViewController
     }
 
     @javafx.fxml.FXML
-    public void handleNotificationButton(ActionEvent actionEvent) throws IOException{
-        SceneSwitcher.sceneSwitch(actionEvent, "alif/see-notification-view.fxml", "Notifications");
+    public void handleNotificationButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void handleProfileButton(ActionEvent actionEvent) throws IOException {
-        SceneSwitcher.sceneSwitch(actionEvent, "alif/applicant-profile-view.fxml", "Apply for Exam");
-
+    public void handleProfileButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML
-    public void handleAdmitCardButton(ActionEvent actionEvent) throws IOException{
-        SceneSwitcher.sceneSwitch(actionEvent, "alif/see-admit-card-view.fxml", "Admit Cards");
+    public void handleAdmitCardButton(ActionEvent actionEvent) {
+    }
 
+    @javafx.fxml.FXML
+    public void handleLogOutButton(ActionEvent actionEvent) {
     }
 
     @javafx.fxml.FXML

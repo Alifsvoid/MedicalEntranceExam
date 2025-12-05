@@ -1,22 +1,23 @@
-package com.example.medicalentranceexam3.alif;
+package com.example.medicalentranceexam3.sabbir;
+
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
-public class ApplicantProfileViewController
+public class UpdateCorrectionNotesView
 {
     @javafx.fxml.FXML
-    private TextField idField;
+    private TextField candidateIdField;
     @javafx.fxml.FXML
-    private Button refreshButton;
+    private TextArea correctionNotesField;
     @javafx.fxml.FXML
-    private TextField feeField;
+    private TextField examTypeField;
     @javafx.fxml.FXML
-    private TextField nameField;
+    private Button backButton;
     @javafx.fxml.FXML
-    private TextField emailField;
+    private Button saveButton;
     @javafx.fxml.FXML
-    private TextField dobField;
+    private Button resetButton;
     @javafx.fxml.FXML
-    private TextField phoneField;
+    private TextField candidateNameField;
 
     @javafx.fxml.FXML
     public void initialize() {

@@ -1,22 +1,22 @@
-package com.example.medicalentranceexam3.alif;
+package com.example.medicalentranceexam3.sabbir;
+
+
 import javafx.event.ActionEvent;
 import javafx.scene.control.*;
-public class ApplicantProfileViewController
+public class CompilerSubmitResultsView
 {
     @javafx.fxml.FXML
-    private TextField idField;
+    private Button submitButton;
+    @javafx.fxml.FXML
+    private TextField authorizedByField;
+    @javafx.fxml.FXML
+    private TextField clearanceField;
     @javafx.fxml.FXML
     private Button refreshButton;
     @javafx.fxml.FXML
-    private TextField feeField;
+    private Button backButton;
     @javafx.fxml.FXML
-    private TextField nameField;
-    @javafx.fxml.FXML
-    private TextField emailField;
-    @javafx.fxml.FXML
-    private TextField dobField;
-    @javafx.fxml.FXML
-    private TextField phoneField;
+    private TextField timestampField;
 
     @javafx.fxml.FXML
     public void initialize() {

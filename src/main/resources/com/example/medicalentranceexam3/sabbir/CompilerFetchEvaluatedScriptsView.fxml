@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="520.0" prefWidth="720.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.medicalentranceexam3.sabbir.CompilerFetchEvaluatedScriptsView">
+
+    <children>
+
+        <!-- Back Button -->
+        <Button text="← Back"
+                layoutX="20" layoutY="20"
+                fx:id="backButton"
+                onAction="#handleBackButton"
+                style="-fx-background-color: #06A3DA; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+        <!-- Main Layout -->
+        <VBox alignment="TOP_CENTER"
+              spacing="20"
+              layoutX="0" layoutY="50"
+              prefWidth="720">
+
+            <!-- Page Title -->
+            <Text text="Fetch Evaluated Scripts from All Evaluators"
+                  style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <!-- Card Container -->
+            <VBox spacing="15" maxWidth="650"
+                  style="-fx-background-color: white;
+                         -fx-padding: 20;
+                         -fx-background-radius: 12;">
+
+                <children>
+
+                    <!-- Summary Section -->
+                    <HBox spacing="30" alignment="CENTER">
+                        <children>
+                            <VBox spacing="8" alignment="CENTER">
+                                <Label text="Total Received" style="-fx-font-weight: bold;"/>
+                                <Text fx:id="totalReceivedText" text="0" style="-fx-font-size: 20px;"/>
+                            </VBox>
+                            <VBox spacing="8" alignment="CENTER">
+                                <Label text="Total Pending" style="-fx-font-weight: bold;"/>
+                                <Text fx:id="totalPendingText" text="0" style="-fx-font-size: 20px;"/>
+                            </VBox>
+                        </children>
+                    </HBox>
+
+                    <!-- Evaluators Table -->
+                    <TableView fx:id="evaluatorsTable" prefHeight="250">
+                        <columns>
+                            <TableColumn fx:id="evaluatorNameCol" text="Evaluator Name" prefWidth="200"/>
+                            <TableColumn fx:id="scriptsSubmittedCol" text="Scripts Submitted" prefWidth="150"/>
+                            <TableColumn fx:id="scriptsPendingCol" text="Scripts Pending" prefWidth="150"/>
+                        </columns>
+                    </TableView>
+
+                    <!-- Action Buttons -->
+                    <HBox alignment="CENTER" spacing="20">
+                        <children>
+                            <Button text="Fetch From Database" fx:id="fetchButton"
+                                    style="-fx-background-color: #4E6BFF; -fx-text-fill: white; -fx-background-radius: 10;"/>
+                            <Button text="Refresh" fx:id="refreshButton"
+                                    style="-fx-background-color: #FFB74D; -fx-text-fill: white; -fx-background-radius: 10;"/>
+                        </children>
+                    </HBox>
+
+                </children>
+            </VBox>
+
+        </VBox>
+
+    </children>
+</AnchorPane>

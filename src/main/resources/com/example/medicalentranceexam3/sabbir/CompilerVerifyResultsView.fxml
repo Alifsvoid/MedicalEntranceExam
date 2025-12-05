@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="550.0" prefWidth="720.0"
+            xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.medicalentranceexam3.sabbir.CompilerVerifyResultsView">
+
+    <children>
+
+        <!-- Back Button -->
+        <Button text="← Back"
+                layoutX="20" layoutY="20"
+                fx:id="backButton"
+                onAction="#handleBackButton"
+                style="-fx-background-color: #06A3DA; -fx-text-fill: white; -fx-background-radius: 8;"/>
+
+        <!-- Main Layout -->
+        <VBox alignment="TOP_CENTER"
+              spacing="20"
+              layoutX="0" layoutY="50"
+              prefWidth="720">
+
+            <!-- Page Title -->
+            <Text text="Verify Results for Inconsistencies"
+                  style="-fx-font-size: 24px; -fx-font-weight: bold;" />
+
+            <!-- Card Container -->
+            <VBox spacing="15" maxWidth="650"
+                  style="-fx-background-color: white;
+                         -fx-padding: 20;
+                         -fx-background-radius: 12;">
+
+                <children>
+
+                    <!-- Final Results Table -->
+                    <TableView fx:id="finalResultsTable" prefHeight="250">
+                        <columns>
+                            <TableColumn fx:id="candidateIdCol" text="Candidate ID" prefWidth="120"/>
+                            <TableColumn fx:id="nameCol" text="Name" prefWidth="200"/>
+                            <TableColumn fx:id="totalMarksCol" text="Total Marks" prefWidth="100"/>
+                            <TableColumn fx:id="statusCol" text="Status" prefWidth="120"/>
+                        </columns>
+                    </TableView>
+
+                    <!-- Error / Mismatch Log -->
+                    <VBox spacing="10">
+                        <Label text="Error / Mismatch Log" style="-fx-font-weight: bold;"/>
+                        <TextArea fx:id="errorLogArea" prefHeight="120" editable="false"
+                                  promptText="Any inconsistencies or mismatches will be displayed here"/>
+                    </VBox>
+
+                    <!-- Action Buttons -->
+                    <HBox alignment="CENTER" spacing="20">
+                        <children>
+                            <Button text="Load Data" fx:id="loadButton"
+                                    style="-fx-background-color: #4E6BFF; -fx-text-fill: white; -fx-background-radius: 10;"/>
+                            <Button text="Verify" fx:id="verifyButton"
+                                    style="-fx-background-color: #2EC971; -fx-text-fill: white; -fx-background-radius: 10;"/>
+                            <Button text="Export Report" fx:id="exportButton"
+                                    style="-fx-background-color: #FFB74D; -fx-text-fill: white; -fx-background-radius: 10;"/>
+                        </children>
+                    </HBox>
+
+                </children>
+            </VBox>
+
+        </VBox>
+
+    </children>
+</AnchorPane>
