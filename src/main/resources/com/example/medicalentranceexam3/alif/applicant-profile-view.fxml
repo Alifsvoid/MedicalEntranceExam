@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.alif.ApplicantProfileViewController">
+
+    <children>
+        <VBox alignment="TOP_CENTER" spacing="20" AnchorPane.leftAnchor="20" AnchorPane.rightAnchor="20" AnchorPane.topAnchor="20">
+
+            <!-- Title -->
+            <Text style="-fx-font-size: 26px; -fx-font-weight: bold;" text="Applicant Profile" />
+
+            <!-- Card -->
+            <VBox maxWidth="500" spacing="15" style="-fx-background-color: #ffffff; -fx-padding: 25; -fx-background-radius: 20;                                       -fx-effect: dropshadow(gaussian, #727272, 10, 0.25, 0, 3);">
+
+                <GridPane hgap="20" vgap="15">
+                    <columnConstraints>
+                        <ColumnConstraints halignment="RIGHT" prefWidth="120" />
+                        <ColumnConstraints prefWidth="250" />
+                    </columnConstraints>
+
+                    <!-- ID -->
+                    <Label text="Applicant ID:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                    <TextField fx:id="idField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+
+                    <!-- Name -->
+                    <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                    <TextField fx:id="nameField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+                    <!-- DOB -->
+                    <Label text="Date of Birth:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+                    <TextField fx:id="dobField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+
+                    <!-- Phone -->
+                    <Label text="Phone:" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+                    <TextField fx:id="phoneField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+                    <!-- Email -->
+                    <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+                    <TextField fx:id="emailField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+
+                    <!-- Fee -->
+                    <Label text="Fee Status:" GridPane.columnIndex="0" GridPane.rowIndex="5" />
+                    <TextField fx:id="feeField" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+
+                </GridPane>
+
+                <!-- Buttons -->
+                <HBox alignment="CENTER" spacing="20">
+                    <Button fx:id="refreshButton" style="-fx-background-color: #06A3DA; -fx-text-fill: white; -fx-background-radius: 10;                                    -fx-padding: 8 20;" text="Refresh" />
+                </HBox>
+
+            </VBox>
+        </VBox>
+      <Button layoutX="30.0" layoutY="30.0" onAction="#handleBackButton" text="← Back" />
+
+    </children>
+</AnchorPane>

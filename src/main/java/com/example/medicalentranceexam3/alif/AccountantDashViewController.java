@@ -1,5 +1,6 @@
 package com.example.medicalentranceexam3.alif;
 
+import com.example.medicalentranceexam3.LoggedInSession;
 import com.example.medicalentranceexam3.utils.SceneSwitcher;
 import javafx.event.ActionEvent;
 
@@ -17,7 +18,9 @@ public class AccountantDashViewController
     }
 
     @javafx.fxml.FXML
-    public void handleLogOutButton(ActionEvent actionEvent) {
+    public void handleLogOutButton(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.sceneSwitch(actionEvent, "login-view.fxml", "Add Applicant");
+        LoggedInSession.setLoggedInAccountant(null);
     }
 
     @javafx.fxml.FXML

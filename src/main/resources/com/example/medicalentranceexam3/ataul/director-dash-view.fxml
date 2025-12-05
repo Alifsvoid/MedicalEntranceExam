@@ -36,7 +36,7 @@
       </Text>
       <Button layoutX="583.0" layoutY="188.0" mnemonicParsing="false" onAction="#handleDeleteSubject" prefHeight="34.0" prefWidth="214.0" text="Delete Subject" />
       <Button layoutX="583.0" layoutY="246.0" mnemonicParsing="false" onAction="#handleEditSubjectButton" prefHeight="34.0" prefWidth="214.0" text="Edit Subject" />
-      <Button layoutX="583.0" layoutY="310.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="214.0" text="Button" />
+      <Button layoutX="583.0" layoutY="310.0" mnemonicParsing="false" onAction="#handleCreateExamButton" prefHeight="34.0" prefWidth="214.0" text="Create Exam" />
       <Button layoutX="583.0" layoutY="370.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="214.0" text="Button" />
       <Button layoutX="583.0" layoutY="438.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="214.0" text="Button" />
       <Button layoutX="583.0" layoutY="497.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="214.0" text="Button" />

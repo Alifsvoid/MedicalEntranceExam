@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.medicalentranceexam3.alif.ApplyExamViewController"
+            prefHeight="400.0" prefWidth="600.0">
+
+    <children>
+
+        <Label layoutX="230" layoutY="40" text="Apply for Exam" style="-fx-font-size: 20px;"/>
+
+        <!-- Exam ID Input -->
+        <Label layoutX="150" layoutY="120" text="Exam ID:"/>
+        <TextField fx:id="examIDField" layoutX="250" layoutY="115" prefWidth="180"/>
+
+        <!-- Exam Name Input -->
+        <Label layoutX="150" layoutY="170" text="Exam Name:"/>
+        <TextField fx:id="examNameField" layoutX="250" layoutY="165" prefWidth="180"/>
+
+        <!-- Apply Button -->
+        <Button fx:id="applyButton"
+                layoutX="250" layoutY="230"
+                prefWidth="180" text="Apply"
+                onAction="#handleApplyButton"/>
+
+        <!-- Back Button -->
+        <Button fx:id="backButton"
+                layoutX="20" layoutY="20"
+                text="← Back"
+                onAction="#handleBackButton"/>
+
+    </children>
+
+</AnchorPane>

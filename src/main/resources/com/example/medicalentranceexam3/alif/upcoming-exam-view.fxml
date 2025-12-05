@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.medicalentranceexam3.alif.UpcomingExamViewController"
+            prefHeight="500.0" prefWidth="800.0">
+
+    <children>
+
+        <!-- Back Button -->
+        <Button text="← Back"
+                layoutX="20" layoutY="20"
+                onAction="#handleBackButton" />
+
+        <Text text="Upcoming Published Exams"
+              layoutX="260" layoutY="60"
+              style="-fx-font-size: 20px; -fx-font-weight: bold;" />
+
+        <!-- Table -->
+        <TableView fx:id="examTable"
+                   layoutX="50" layoutY="100"
+                   prefWidth="700" prefHeight="350">
+
+            <columns>
+                <TableColumn fx:id="examIdCol" text="Exam ID" prefWidth="100"/>
+                <TableColumn fx:id="titleCol" text="Title" prefWidth="250"/>
+                <TableColumn fx:id="dateCol" text="Exam Date" prefWidth="150"/>
+                <TableColumn fx:id="publishCol" text="Published On" prefWidth="180"/>
+            </columns>
+        </TableView>
+
+    </children>
+
+</AnchorPane>

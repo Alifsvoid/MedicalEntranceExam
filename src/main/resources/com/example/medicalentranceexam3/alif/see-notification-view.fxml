@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.medicalentranceexam3.alif.SeeNotificationViewController"
+            prefHeight="500.0" prefWidth="800.0">
+
+    <children>
+
+        <!-- Table -->
+        <TableView fx:id="tableView" layoutX="20" layoutY="60"
+                   prefWidth="760" prefHeight="400">
+
+            <columns>
+                <TableColumn fx:id="colID" text="Notification ID" prefWidth="150"/>
+                <TableColumn fx:id="colMessage" text="Message" prefWidth="400"/>
+                <TableColumn fx:id="colTime" text="Timestamp" prefWidth="200"/>
+            </columns>
+
+        </TableView>
+
+        <!-- Back Button -->
+        <Button fx:id="btnBack" text="Back"
+                layoutX="20" layoutY="15"
+                prefWidth="80" prefHeight="30"
+                onAction="#onBackClicked"/>
+
+    </children>
+</AnchorPane>

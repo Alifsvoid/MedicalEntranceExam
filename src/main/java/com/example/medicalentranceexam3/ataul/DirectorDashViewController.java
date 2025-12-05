@@ -47,5 +47,10 @@ public class DirectorDashViewController
     public void handleEditSubjectButton(ActionEvent actionEvent)throws IOException {
         SceneSwitcher.sceneSwitch(actionEvent, "ataul/edit-subject-view.fxml", "Hello");
     }
+
+    @javafx.fxml.FXML
+    public void handleCreateExamButton(ActionEvent actionEvent) throws IOException{
+        SceneSwitcher.sceneSwitch(actionEvent, "ataul/create-exam-view.fxml", "Hello");
+    }
 }
 //        SceneSwitcher.sceneSwitch(actionEvent, "ataul/", "Hello");

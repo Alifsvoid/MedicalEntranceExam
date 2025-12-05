@@ -8,20 +8,30 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.ataul.CreateExamView">
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.medicalentranceexam3.ataul.AddQuestionView">
    <children>
+
+      <!-- Back Button -->
+      <Button layoutX="30" layoutY="20" onAction="#handleBackButton" text="← Back" />
+
       <TextField fx:id="titleTextField" layoutX="119.0" layoutY="86.0" prefHeight="26.0" prefWidth="163.0" />
-      <Text layoutX="46.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Exam Title:" />
-      <Button layoutX="119.0" layoutY="170.0" mnemonicParsing="false" onAction="#handleCreateButton" prefHeight="26.0" prefWidth="163.0" text="Create" />
+      <Text layoutX="46.0" layoutY="104.0" text="Exam Title:" />
+
+      <DatePicker fx:id="examDatePicker" layoutX="119.0" layoutY="126.0" prefHeight="26.0" prefWidth="163.0" promptText="Exam Date" />
+
+      <Button layoutX="119.0" layoutY="170.0" onAction="#handleCreateButton" prefHeight="26.0" prefWidth="163.0" text="Create" />
+
       <TableView fx:id="examTableView" layoutX="61.0" layoutY="291.0" prefHeight="242.0" prefWidth="780.0">
+
          <columns>
-            <TableColumn fx:id="examIdCol" prefWidth="111.20000457763672" text="Exam ID" />
-            <TableColumn fx:id="titleCol" prefWidth="223.20004272460938" text="Title" />
-            <TableColumn fx:id="statusCol" prefWidth="201.60000610351562" text="Status" />
-            <TableColumn fx:id="publishDateCol" prefWidth="240.79998779296875" text="Publish Date" />
+            <TableColumn fx:id="examIdCol" prefWidth="120" text="Exam ID" />
+            <TableColumn fx:id="titleCol" prefWidth="200" text="Title" />
+            <TableColumn fx:id="statusCol" prefWidth="200" text="Status" />
+            <TableColumn fx:id="examDateCol" prefWidth="200" text="Exam Date" />
          </columns>
       </TableView>
-      <DatePicker fx:id="publishDatePicker" layoutX="119.0" layoutY="126.0" prefHeight="26.0" prefWidth="163.0" promptText="Publish Date" />
+
    </children>
+
 </AnchorPane>
